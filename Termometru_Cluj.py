@@ -4,20 +4,28 @@
 # fahrenheit
 # class
 
-class temperature_celsius:
-    def __init__(self, celsius, fahrenheit):
-        self.celsius = celsius
-        self.fahrenheit = fahrenheit
+class Thermometer():
+    def __init__(self, temperature):
+        self.temperature = temperature
 
-    def get_temp(self):
-        print(self.celsius)
-        print(self.fahrenheit)
+    def get_temperature(self, unit="C"):
+        if unit == "C":
+            return self.temperature
+        elif unit == "F":
+            return self.temperature.to_fahrenheit(self.temperature)
 
-    def set_temp():
+    def set_temperature(self, temperature):
+        self.temperature = temperature
 
-    def convert_in_celsius(self, fahrenheit):
-        self.celsius = (fahrenheit-32)/1.8
-        return self_celsius
+    def to_celsius (self, temperature):
+        temperature  = (temperature-32)+5/9
+        return temperature
 
-    def convert_in_fahrenheit(selfi, celsius):
-        self.fahrenheit = 
+    def to_fahrenheit(self, temperature):
+        temperature = temperature * 9 / 5 +32
+        return temperature
+
+b=Thermometer(30)
+x=b.to_fahrenheit(b.temperature)
+print(x)
+
